@@ -14,11 +14,11 @@ fun main(args : Array<String>) {
     r1.height = 10
     r1.color = "Black"
 
-    var list1 = mutableListOf<Shape>(c1, r1)
+    var list1 = mutableListOf(c1, r1)
     var list2 = mutableListOf<Shape>()
 
-    list2.add(Circle(c1))
-    list2.add(Rectangle(r1))
+    list2.add(c1.cloneShape())
+    list2.add(r1.cloneShape())
 
     for (sh in list1) {
         println(sh)
