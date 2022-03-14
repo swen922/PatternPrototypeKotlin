@@ -1,0 +1,33 @@
+
+import shape.*
+
+/** Прототип, также известен как: Клон, Prototype */
+
+fun main(args : Array<String>) {
+    var c1 = Circle()
+    var r1 = Rectangle()
+
+    c1.diameter = 12
+    c1.color = "White"
+
+    r1.width = 20
+    r1.height = 10
+    r1.color = "Black"
+
+    var list1 = mutableListOf<Shape>(c1, r1)
+    var list2 = mutableListOf<Shape>()
+
+    list2.add(Circle(c1))
+    list2.add(Rectangle(r1))
+
+    for (sh in list1) {
+        println(sh)
+    }
+
+    println("---")
+
+    for (sh in list2) {
+        println(sh)
+    }
+
+}
